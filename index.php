@@ -46,10 +46,10 @@
         $name = $_POST['name'];
         $email = $_POST['email'];
         $date = date("Y-m-d");
-        $comapny = $_POST['company'];
+        $company = $_POST['company'];
         // Insert data
-        $sql_insert = "INSERT INTO registration_tbl (name, email, date) 
-                   VALUES (?,?,?)";
+        $sql_insert = "INSERT INTO registration_tbl (name, email, date,company) 
+                   VALUES (?,?,?,?)";
         $stmt = $conn->prepare($sql_insert);
         $stmt->bindValue(1, $name);
         $stmt->bindValue(2, $email);
@@ -78,7 +78,7 @@
             echo "<tr><td>".$registrant['name']."</td>";
             echo "<td>".$registrant['email']."</td>";
             echo "<td>".$registrant['date']."</td></tr>";
-             echo "<td>".$registrant['comapny']."</td></tr>";
+            echo "<td>".$registrant['company']."</td></tr>";
         }
         echo "</table>";
     } else {
