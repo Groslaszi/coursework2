@@ -20,10 +20,13 @@
 <p>Fill in your name and email address, then click <strong>Submit</strong> to register.</p>
 <form method="post" action="index.php" enctype="multipart/form-data" >
       Name  <input type="text" name="name" id="name"/></br>
+      Search for Name <input type="text" name="search" id="search"/></br>
       Company  <input type="text" name="company" id="company"/></br>
       Email <input type="text" name="email" id="email"/></br>
       <input type="submit" name="submit" value="Submit" />
-</form>
+</form></br>
+
+<a href="search.php"> Search</a></br></br>
 <?php
     // DB connection info
     //TODO: Update the values for $host, $user, $pwd, and $db
