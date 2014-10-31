@@ -42,7 +42,7 @@
          $host = "eu-cdbr-azure-north-b.cloudapp.net";
          $user = "b49856281d3308";
          $pwd = "de457c0c";
-          $db = "laszlodAE61TtB7b";
+         $db = "laszlodAE61TtB7b";
             // Connect to database
             try {
                 $conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
@@ -57,7 +57,7 @@
             $company = $_POST['company'];
 
             // Retrieve data
-            $sql_select = "SELECT * FROM registration_tbl WHERE name = '$name';
+            $sql_select = "SELECT * FROM registration_tbl WHERE name ='$name'";
             $stmt = $conn->query($sql_select);
             $registrants = $stmt->fetchAll(); 
             if(count($registrants) > 0) {
